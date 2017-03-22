@@ -16,7 +16,6 @@
 
     <application android:process="android.process.media"
                  android:label="@string/app_label"
-                 android:icon="@mipmap/ic_launcher_gallery"
                  android:allowBackup="false"
                  android:supportsRtl="true">
         <provider android:name="MediaProvider" android:authorities="media"
@@ -50,6 +49,10 @@
         </receiver>
 
         <receiver android:name="MediaScannerReceiver">
+            <intent-filter>
+                <action android:name="com.android.providers.media.SCAN_ALL" />
+                <action android:name="com.android.providers.media.DISMISS_SCAN" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>

@@ -192,7 +192,6 @@ public final class RingtonePickerActivity extends AlertActivity implements
 
         mShowOkCancelButtons = getResources().getBoolean(R.bool.config_showOkCancelButtons);
 
-
         mCursor = new LocalizedCursor(mRingtoneManager.getCursor(), getResources(), COLUMN_LABEL);
 
         // The volume keys will control the stream that we are choosing a ringtone for
